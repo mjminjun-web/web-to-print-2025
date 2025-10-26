@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: s(10, 1fr);
+
+    width: 100%;
+    background: rgb(252, 252, 252);
+    /* box-sizing ensures padding and border are included in the width */
+    box-sizing: border-box;
+}
+
+.grid-cell {
+    border: 1px solid #7a7a7a;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+}
+
+.grid-cell:hover {
+    background: #eac235;
+}
+
+ <script src="function.js" defer></script>
+</body>
+</html>
