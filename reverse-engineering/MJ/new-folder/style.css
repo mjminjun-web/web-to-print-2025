@@ -1,0 +1,278 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page style */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+  padding: 20px;
+}
+
+/* Main box */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(215, 214, 214, 0.05);
+}
+
+/* Left menu */
+nav {
+  width: 220px;
+  background: #3a3a3a;
+  padding: 0;
+  border-right: none;
+}
+
+.nav-header {
+  padding: 20px 20px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.nav-header h2 {
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  color: white;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+  border-bottom: none;
+}
+
+nav a {
+  display: block;
+  padding: 15px 20px;
+  color: #cccccc;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background: #e0e0e0;
+}
+
+nav a.active {
+  background: #4a4a4a;
+  color: white;
+  font-weight: normal;
+}
+
+/* Main area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(160, 158, 158);
+}
+
+/* Grid layout - 3 columns */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* Each box in grid */
+.grid-item {
+  background: whitesmoke;
+  padding: 15px;
+  border: 2px solid gray;
+  min-height: 150px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: block;
+  text-decoration: none !important;
+}
+
+.grid-item,
+.grid-item h2,
+.grid-item label,
+.grid-item p {
+  color: #333 !important;
+}
+
+.grid-item:visited,
+.grid-item:link {
+  color: #333 !important;
+  text-decoration: none !important;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(208, 207, 207, 0.3);
+}
+
+/* Content wrapper */
+.grid-item .item-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover overlay - hidden by default */
+.grid-item .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(192, 192, 192, 0.85);  /*it's the color of hover */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Show overlay on hover */
+.grid-item:hover .hover-overlay {
+  opacity: 1;
+}
+
+.grid-item .hover-overlay p {
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+}
+
+.grid-item h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* All inputs */
+.grid-item input,
+.grid-item textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid black;
+  background: white;
+  font-size: 13px;
+  margin: 3px 0;
+}
+
+.grid-item textarea {
+  min-height: 60px;
+}
+
+/* Checkbox and radio */
+.grid-item input[type="checkbox"],
+.grid-item input[type="radio"] {
+  width: auto;
+  margin: 5px;
+}
+
+/* Color picker */
+.grid-item input[type="color"] {
+  height: 35px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.grid-item button,
+.grid-item input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  background: lightgray;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.grid-item button:hover,
+.grid-item input[type="submit"]:hover {
+  background: #ccc;
+}
+
+/* CAPTCHA styles */
+.grid-item .inline {
+  display: inline-block;
+  margin: 5px;
+}
+
+.grid-item #user-input input {
+  width: auto;
+  min-width: 120px;
+}
+
+.grid-item #image {
+  min-width: 100px;
+  min-height: 40px;
+  background: lightgray;
+  padding: 5px 10px;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.grid-item .fa-sync {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.grid-item #key {
+  margin-top: 10px;
+  padding: 8px;
+  background: lightyellow;
+  border: 1px solid gray;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Mobile friendly */
+@media (max-width: 1024px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+}
