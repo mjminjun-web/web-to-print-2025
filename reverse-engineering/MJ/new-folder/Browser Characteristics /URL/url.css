@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.item-content {
+    text-align: center;
+    border: 3px solid #808080;
+    padding: 25px;
+    border-radius: 3px;
+    background-color: #e8e8e8;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    width: 320px;
+}
+
+.item-content h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #404040;
+    font-weight: normal;
+}
+
+.item-content label {
+    display: block;
+    margin: 15px 0 8px 0;
+    font-size: 14px;
+    color: #505050;
+    text-align: left;
+}
+
+.item-content input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #999;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.item-content input::placeholder {
+    color: #aaa;
+}
+
+.item-content button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background-color: #999;
+    color: #fff;
+    border: 2px solid #777;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.item-content button:hover {
+    background-color: #888;
+}
+
+.hover-overlay {
+    margin-top: 12px;
+    color: #666;
+    font-size: 11px;
+}
+
+.feedback-message {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    border: 1px solid #999;
+}
+
+.feedback-message.error {
+    background-color: #ddd;
+    color: #555;
+}
+
+.feedback-message.warning {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.feedback-message.hidden {
+    display: none;
+}
+
+.mistake-counter {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #d8d8d8;
+    border: 2px solid #999;
+    border-radius: 3px;
+    min-height: 50px;
+}
+
+.mistake-list {
+    text-align: left;
+    font-size: 11px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.mistake-list div {
+    margin: 6px 0;
+    padding: 4px;
+    background-color: #ccc;
+    border-left: 3px solid #888;
+}
+
+.bottom-left-description {
+    position: fixed;
+    bottom: 300px;
+    left: 540px;
+    color: #555;
+    font-size: 10px;
+    background-color: rgba(200, 200, 200, 0.8);
+    padding: 8px;
+    border: 1px solid #999;
+}
+
+.bottom-left-description p {
+    margin: 2px 0;
+}
+
+
+
+.hint-button:hover {
+  background-color: #777;
+}
+
+.item-content {
+  position: relative; /* Add this to your existing .item-content */
+}
+
+.hint-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #999;
+  color: white;
+  border: 2px solid #777;
+  font-size: 5px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hint-button:hover {
+  background-color: #777;
+}
+
+.hint-button:hover {
+  background-color: #777;
+}
+
+.hint-popup {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  background-color: #fff;
+  border: 2px solid #999;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  width: 150px;
+  display: none;
+  z-index: 100;
+}
+
+.hint-popup.show {
+  display: block;
+}

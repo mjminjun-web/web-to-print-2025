@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>You Thought</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="generate()">
+
+<div class="container">
+  <!-- Left Navigation -->
+ 
+  <!-- Main Content with 3x3 Grid -->
+  <main class="main-content">
+    <h1>What Input brings you</h1>
+    
+    <section>
+      <a href="URL/url.html" class="grid-item">
+        <div class="item-content">
+          <h2>URL Input</h2>
+          <label for="url">Enter URL:</label>
+          <input type="url" id="url" name="url" placeholder="Enter URL">
+          <button>Click</button>
+        </div>
+        <div class="hover-overlay">
+          <p>Enter and validate website URLs</p>
+        </div>
+      </a>
+      
+      <a href="file-input.html" class="grid-item">
+        <div class="item-content">
+          <h2>File Input</h2>
+          <label for="file">Choose file:</label>
+          <input type="file" id="file" name="file">
+        </div>
+        <div class="hover-overlay">
+          <p>Upload files from your device</p>
+        </div>
+      </a>
+    
+
+      <a href="checkbox.html" class="grid-item">
+        <div class="item-content">
+          <h2>Checkbox Example</h2>
+          <input type="checkbox" id="Kimchi" name="Kimchi"  />
+          <label for="Kimchi">Kimchi</label><br>
+          <input type="checkbox" id="pizza" name="pizza" checked />
+          <label for="pizza">Pizza</label><br>
+          <input type="checkbox" id="Chicken" name="Chicken"  />
+          <label for="Chicken">Chicken</label><br>
+          <input type="checkbox" id="Hamburger" name="Hamburger"  />
+          <label for="Hamburger">Hamburger</label><br>
+          <input type="checkbox" id="Pasta" name="Pasta"  />
+          <label for="Pasta">Pasta</label>
+        </div>
+        <div class="hover-overlay">
+          <p>Select multiple food options</p>
+        </div>
+       </a>
+      
+      <a href="date-picker.html" class="grid-item">
+        <div class="item-content">
+          <h2>Date Picker</h2>
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" value="2019-06-17">
+        </div>
+        <div class="hover-overlay">
+          <p>Choose a date from calendar</p>
+        </div>
+      </a>
+      
+      <a href="password-input.html" class="grid-item">
+        <div class="item-content">
+          <h2>Password Input</h2>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="hover-overlay">
+          <p>Secure login with email and password</p>
+        </div>
+      </a>
+      
+      <a href="color-picker.html" class="grid-item">
+        <div class="item-content">
+          <h2>Color Picker</h2>
+          <label for="color">Choose a color:</label>
+          <input type="color" id="color" name="color" value="#3498db">
+        </div>
+        <div class="hover-overlay">
+          <p>Pick your favorite color</p>
+        </div>
+      </a>
+      
+      <a href="text-input.html" class="grid-item">
+        <div class="item-content">
+          <h2>Text Input</h2>
+          <label for="text1">Name:</label>
+          <input type="text" id="text1" name="text1" placeholder="Enter your name">
+        </div>
+        <div class="hover-overlay">
+          <p>Enter text information</p>
+        </div>
+      </a>
+
+      <a href="captcha.html" class="grid-item">
+        <div class="item-content">
+          <h2>CAPTCHA Input</h2>
+          <div id="user-input" class="inline">
+            <input type="text" 
+                   id="submit" 
+                   placeholder="Captcha code" />
+          </div>
+          <div class="inline" onclick="generate(); event.stopPropagation();">
+            <i class="fas fa-sync"></i>
+          </div>
+          <div id="image" 
+               class="inline" 
+               selectable="False">
+          </div>
+          <input type="submit" 
+                 id="btn" 
+                 onclick="printmsg(); event.stopPropagation();" />
+          <p id="key"></p>
+        </div>
+        <div class="hover-overlay">
+          <p>Verify you're human with captcha</p>
+        </div>
+      </a>
+
+    </section>
+  </main>
+</div>
+
+<script src="function.js"></script>
+
+</body>
+</html>
